@@ -124,7 +124,7 @@ const Playlist = () => {
 	const currentPlayingTrackId = useMemo(() => track?.id || '', [track]);
 
 	// render
-	const renderTrackContextMenu = (track_id) => {
+	const renderTrackContextMenu = (track_id, is_collected) => {
 		if (showContextMenuById.id !== track_id) return null;
 
 		return (
@@ -190,7 +190,7 @@ const Playlist = () => {
 					</button>
 					<span>{secondsToHHMMSS(duration)}</span>
 				</div>
-				{renderTrackContextMenu(track_id)}
+				{renderTrackContextMenu(track_id, is_collected)}
 			</div>
 		);
 	};

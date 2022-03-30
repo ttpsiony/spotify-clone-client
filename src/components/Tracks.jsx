@@ -110,7 +110,7 @@ function Track() {
 			/>
 		);
 	};
-	const renderTrack = (track, idx) => {
+	const renderTrack = (item, idx) => {
 		const track_id = item?.track?.id || '';
 		const imageSrc = item?.track?.album?.images[0]?.url || '';
 		const albumName = item?.track?.album?.name || '';
