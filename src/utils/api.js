@@ -7,7 +7,7 @@ const withAxios = (method, endpoint, params, options) => {
 	const token = cookies.get('X-Access-Token');
 
 	return axios({
-		baseURL: 'https://ttpsiony-spotify-clone-server.herokuapp.com/api',
+		baseURL: `${process.env.REACT_APP_API_BASE_URL}/api`,
 		headers: options || {
 			'X-Access-Token': token ? `${token}` : '',
 			'Content-Type': 'application/json',
