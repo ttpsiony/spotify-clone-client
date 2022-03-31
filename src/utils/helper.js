@@ -4,8 +4,7 @@ import { useLocation } from 'react-router';
 export const DOMAIN = process.env.REACT_APP_DOMAIN;
 export const CSRF_STATE_STORED_KEY = process.env.REACT_APP_CSRF_STATE_STORED_KEY;
 export const COOKIES_ACCESS_TOKEN_KEY = process.env.REACT_APP_COOKIES_ACCESS_TOKEN_KEY;
-// export const SESSION_REFRESH_TOKEN_KEY = `Bearer:refresh_token`;
-// export const COOKIES_REFRESH_TOKEN_KEY = 'X-Refresh-Token';
+export const SESSION_REFRESH_TOKEN_KEY = process.env.REACT_APP_SESSION_REFRESH_TOKEN_KEY;
 
 export const secondsToHHMMSS = (totalSeconds) => {
 	let time = totalSeconds < 0 ? 0 : totalSeconds;
