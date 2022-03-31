@@ -99,6 +99,7 @@ export const actions = {
 				dispatch(actions.toggleAuthLoading(true));
 				history.replace('/');
 				await sleep(100);
+				dispatch(actions.toggleAuthLoading(true));
 
 				const { data = {} } = await callAPI.post('/v1/auth/callback', { code, state });
 				const expires_timestamp = +new Date() + 3600 * 1000;
